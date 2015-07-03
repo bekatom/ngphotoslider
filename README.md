@@ -1,3 +1,3 @@
 #ngphotoslider
 
-Angluar Photo Slider
+Angular Photo Slider
