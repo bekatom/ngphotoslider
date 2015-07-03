@@ -114,7 +114,7 @@ myApp.directive('ngphotoslider', function() {
 
          $scope.currentItemIndex = index;
 
-         updatePagination();
+         //updatePagination();
 
        }
 
