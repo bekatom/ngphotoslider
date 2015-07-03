@@ -1,0 +1,22 @@
+{
+  "name": "ngphotoslider",
+  "version": "0.0.0",
+  "description": "Angular Photo slider",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btomashvili/ngphotoslider"
+  },
+  "author": "Beka Tomashvili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/btomashvili/ngphotoslider/issues"
+  },
+  "homepage": "https://github.com/btomashvili/ngphotoslider",
+  "dependencies": {
+    "http-server": "0.8.0"
+  }
+}

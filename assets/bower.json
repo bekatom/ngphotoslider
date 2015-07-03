@@ -1,0 +1,20 @@
+{
+  "name": "Angular Photo Slider",
+  "version": "0.0.0",
+  "authors": [
+    "btomashvili <bekatomashvili@gmail.com>"
+  ],
+  "description": "Angular Photo slider",
+  "license": "MIT",
+  "homepage": "https://github.com/btomashvili/ngphotoslider",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "3.3.0"
+  }
+}

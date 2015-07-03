@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Angular ngphotoslider</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/non-responsive.css">
+  <!-- http://www.minimamente.com/example/magic_animations/ -->
+  <link rel="stylesheet" href="/assets/css/magic/magic.min.css">
+  <link rel="stylesheet" href="/assets/bower_components/animate.css/animate.min.css">
+  <script src="/assets/js/app.js"></script>
+</head>
+<body>
+
+<div ng-include="'views/header.html'"></div>
+
+<div class="container">
+
+<div ng-controller="MainCtrl">
+
+<div class="row row-offcanvas row-offcanvas-right">
+
+  <div class="col-xs-12 col-sm-9">
+
+    <ngphotoslider data-images="images"
+    data-animation="animated flipInY"
+    data-current-item-index="index" data-on-previous="updateTsPrevious()"  data-on-next="updateTsNext()">
+    </ngphotoslider>
+
+  </div>
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+
+      <h5> Data animations samples for ngphotoslider</h5>
+      <div>
+            <h5><a target="_blank" href="https://github.com/daneden/animate.css">Animate Css </a> </h5>
+            <ul>
+              <li>animated flipInY</li>
+              <li>animated lightSpeedInRight</li>
+              <li>animated vanishIn</li>
+            </ul>
+            <h5> <a target="_blank" href="http://www.minimamente.com/example/magic_animations/">Magic CSS</a></h5>
+            <ul>
+              <li>magictime puffIn</li>
+              <li>magictime puffOut</li>
+            </ul>
+      </div>
+
+
+
+  </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</body>
+</html>
