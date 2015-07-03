@@ -16,11 +16,13 @@ myApp.controller('MainCtrl',function ($scope) {
    ];
 
    // callbacks for change in slides
-  $scope.updateTsPrevious = function() {
-    $scope.tsPrevious = +new Date();
+  $scope.eventOnPrevious = function() {
+    // event on Previous button click
+    console.log('event on Previous');
   };
-  $scope.updateTsNext = function() {
-    $scope.tsNext = +new Date();
+  $scope.eventOnNext = function() {
+    // event on Next button click
+    console.log('event on NEXT ');
   };
 
   $scope.animation = 'slide';
@@ -61,7 +63,7 @@ myApp.directive('ngphotoslider', function() {
        if ($scope.animation) {
 
          //$scope.animationClass = 'animated ' + $scope.animation;
-         $scope.animationClass =$scope.animation;
+         $scope.animationClass = $scope.animation;
        }
 
        var displayOptions  = {
@@ -75,14 +77,7 @@ myApp.directive('ngphotoslider', function() {
          hideNextClass: 'ngphotoslider-slider-item--hide-next'
        };
 
-       function updateClasses() {
-         if ($scope.itemClasses.length !== $scope.images.length) {
-           $scope.itemClasses = [];
-           for (var i=0; i<$scope.images.length; i++) {
-             $scope.itemClasses.push('');
-           }
-         }
-       }
+
        function nextDisabled() {
          console.log('$scope.currentItemIndex', $scope.currentItemIndex, $scope.images.length);
 
@@ -95,12 +90,8 @@ myApp.directive('ngphotoslider', function() {
          $scope.nextDisabled = nextDisabled();
          $scope.prevDisabled = prevDisabled();
        }
-       function clearClasses() {
-         for (var i=0; i<$scope.images.length; i++) {
-           $scope.itemClasses[i] = '';
-         }
 
-       }
+
 
        // go to slide
        function getItem(index) {
@@ -109,11 +100,12 @@ myApp.directive('ngphotoslider', function() {
 
            if (!index) {
              $scope.itemClasses[0] = displayOptions.currentItemClass;
+             console.log($scope.itemClasses);
            }
            return;
          }
 
-         clearClasses();
+         //clearClasses();
 
          $scope.itemClasses[$scope.currentItemIndex] = (index > $scope.currentItemIndex) ? displayOptions.hidePreviousClass : displayOptions.hideNextClass;
 

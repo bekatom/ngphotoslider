@@ -2,14 +2,15 @@
 
   <ul class="ngphotoslider-slider__list">
     <li class="ngphotoslider-slider-item {{itemClasses[$index]}} {{animationClass}}" ng-repeat="i in images">
-      <img class="" src="{{i}}"></li>
-      </ul>
-      <button ng-show="images.length>1" class="st-button ngphotoslider-slider-btn ngphotoslider-slider-btn--previous btn btn--previous"
+      <img class="" src="{{i}}">
+    </li>
+  </ul>
+
+      <button ng-show="images.length>1" class="btn btn-default"
         ng-disabled="prevDisabled" ng-click="onPrevButtonClicked()">Previous</button>
 
       <button ng-show="images.length>1"
-          class="st-button ngphotoslider-slider-btn ngphotoslider-slider-btn--next btn btn--next"
+          class="btn btn-default"
           ng-disabled="nextDisabled" ng-click="onNextButtonClicked()">Next</button>
-
 
 </div>
