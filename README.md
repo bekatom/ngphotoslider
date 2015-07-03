@@ -1,0 +1,3 @@
+#ngphotoslider
+
+Angluar Photo Slider
