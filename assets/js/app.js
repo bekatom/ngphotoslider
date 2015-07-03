@@ -71,10 +71,10 @@ myApp.directive('ngphotoslider', function() {
         //  btnNextClass: 'ngphotoslider-slider-btn--next',
          itemClass: 'ngphotoslider-slider-item',
          currentItemClass: 'ngphotoslider-slider-item--current',
-         showPreviousClass: 'ngphotoslider-slider-item--show-previous',
-         showNextClass: 'ngphotoslider-slider-item--show-next',
-         hidePreviousClass: 'ngphotoslider-slider-item--hide-previous',
-         hideNextClass: 'ngphotoslider-slider-item--hide-next'
+         showPreviousClass: '',
+         showNextClass: '',
+         hidePreviousClass: '',
+         hideNextClass: ''
        };
 
 
