@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Css Animation test</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- http://www.minimamente.com/example/magic_animations/ -->
+</head>
+<style>
+
+.mydiv{
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes example{
+  from { background-color: red ;}
+  to { background-color: yellow; }
+}
+
+.images-div{
+  position:relative;
+  height: 350px;
+  width: 350px;
+  /*margin: 0 auto 10px;*/
+}
+
+.images-div img{
+  position: relative;
+  left:0px;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity:0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+</style>
+
+<body>
+
+
+<div class="container">
+
+<h1>  Css Animations test samples </h1>
+
+<div class="mydiv"></div>
+
+</br>
+<div class="images-div">
+    <img src="/assets/images/1.jpg" alt="">
+    <img src="/assets/images/2.jpg" alt="">
+    <img src="/assets/images/3.jpg" alt="">
+</div>
+
+
+</div>
+
+</body>
+</html>
