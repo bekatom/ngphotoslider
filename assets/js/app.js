@@ -42,8 +42,8 @@ myApp.directive('ngphotoslider', function() {
       animation: '@',
       currentItemIndex: '=',
       onNext: '&',
-      onPrevious: '&'
-
+      onPrevious: '&',
+      linkedImages: '='
     },
     controller: function($scope, $timeout) {
 
@@ -59,6 +59,7 @@ myApp.directive('ngphotoslider', function() {
       //    console.log('itemClasses', itemClasses);
       //  });
 
+      console.log($scope.carousel);
 
        if ($scope.animation) {
 
@@ -95,6 +96,12 @@ myApp.directive('ngphotoslider', function() {
 
        // go to slide
        function getItem(index) {
+
+         // if item is last item in list & linked items is turnd
+         // on then swich to first element in list
+         if($scope.linkedImages && index ===$scope.images.length){
+           index = 0;
+         }
 
          if (index >= $scope.images.length || index < 0 || index === $scope.currentItemIndex) {
 
