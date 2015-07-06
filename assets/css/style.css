@@ -6,6 +6,7 @@
   list-style: none;
   position: relative;
   overflow: hidden;
+
 }
 
 .ngphotoslider-slider-item {
@@ -23,4 +24,10 @@
 .ngphotoslider-slider-item--current {
   display: block;
   position: static;
+}
+
+.ngphotoslider-nav-buttons{
+
+  position: absolute;
+  left:10%;
 }
