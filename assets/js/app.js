@@ -3,9 +3,12 @@ var myApp = angular.module('myApp',[]);
 
 myApp.controller('MainCtrl',function ($scope) {
 
-    console.log('main controller');
+    
+    // for demo initial  style 
+  $scope.ngPhotoSliderStyle = "animated flipInX";
+  
 
-    $scope.index = 0;
+  $scope.index = 0;
 
    $scope.images = [
      '/assets/images/1.jpg',
@@ -18,11 +21,11 @@ myApp.controller('MainCtrl',function ($scope) {
    // callbacks for change in slides
   $scope.eventOnPrevious = function() {
     // event on Previous button click
-    console.log('event on Previous');
+    //console.log('event on Previous');
   };
   $scope.eventOnNext = function() {
     // event on Next button click
-    console.log('event on NEXT ');
+    //console.log('event on NEXT ');
   };
 
   $scope.animation = 'slide';
@@ -49,6 +52,12 @@ myApp.directive('ngphotoslider', function() {
 
        $scope.itemClasses = [];
 
+      $scope.$watch("animation",function(newValue,oldValue) {
+        //This gets called when data changes.
+        console.log("Animation",newValue, oldValue);
+        $scope.animationClass = newValue;
+      }); 
+
        $scope.$watch('images', function(images) {
          if (images.length) {
            getItem(0);
@@ -59,7 +68,7 @@ myApp.directive('ngphotoslider', function() {
       //    console.log('itemClasses', itemClasses);
       //  });
 
-      console.log($scope.carousel);
+      
 
        if ($scope.animation) {
 

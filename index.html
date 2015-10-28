@@ -23,9 +23,8 @@
 <div class="row row-offcanvas row-offcanvas-right">
 
   <div class="col-md-6 col-xs-6 col-sm-4">
-
     <ngphotoslider data-images="images"
-    data-animation="animated fadeIn" data-linked-images="true"
+    data-animation="{{ngPhotoSliderStyle}}" data-linked-images="true"
     data-current-item-index="index" data-on-previous="eventOnPrevious()"  data-on-next="eventOnNext()">
     </ngphotoslider>
 
@@ -35,6 +34,15 @@
 
 
       <h5> Data animations samples for ngphotoslider</h5>
+      <select name="select-style" ng-model="ngPhotoSliderStyle" ng-change="changeStyle()">
+        <option value="animated flipInY">animated flipInY</option>
+        <option value="animated lightSpeedInRight">animated lightSpeedInRight</option>
+        <option value="animated vanishIn">animated vanishIn</option>
+        <option value="animated rotateInDownLeft">animated rotateInDownLeft</option>
+        <option value="animated flipInX">animated flipInX</option>
+        <option value="animated fadeIn">animated fadeIn</option>
+        <option value="animated fadeInDown">animated fadeInDown</option>
+      </select>
       <div>
             <h5><a target="_blank" href="https://github.com/daneden/animate.css">Animate Css </a> </h5>
             <ul>
