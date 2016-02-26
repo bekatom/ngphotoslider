@@ -17,7 +17,7 @@ Angular photo slider  directive with animate CSS & Magic CSS
 </ngphotoslider>
 ```
 
-[DEMO](http://178.62.244.43:8182/)
+[DEMO](http://162.243.145.98:8082/)
 
 ![screen](https://raw.githubusercontent.com/btomashvili/ngphotoslider/master/assets/images/ngphotoslider.png "ngphotoslider")
 
